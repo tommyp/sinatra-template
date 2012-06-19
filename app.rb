@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'haml'
+require 'bundler'
 
 set :public_folder, File.dirname(__FILE__) + '/public'
   
