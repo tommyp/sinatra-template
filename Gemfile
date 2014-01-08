@@ -3,6 +3,7 @@ ruby '1.9.2'
 
 gem 'bundler'
 gem 'sinatra'
+gem 'sinatra-partial'
 
 # Markup
 

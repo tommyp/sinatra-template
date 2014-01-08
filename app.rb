@@ -1,14 +1,20 @@
 require 'sinatra'
 require 'bundler'
 require 'sinatra/assetpack'
+require 'sinatra/partial'
 
 class Application < Sinatra::Base
 
   register Sinatra::AssetPack
+  register Sinatra::Partial
 
   set :static, true
   set :root, File.dirname(__FILE__)
   set :public_folder, File.dirname(__FILE__) + '/public'
+
+  configure do
+    enable :partial_underscores
+  end
 
   assets {
     serve '/js',     from: 'assets/js'        # Default
